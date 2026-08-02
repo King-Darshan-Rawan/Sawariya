@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee-left 45s linear infinite;
+}
+.marquee:hover .animate-marquee {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee { animation: none; }
+}
+
+/* #destinations{
+  padding-bottom: 0;
+} */
+/* ---- Marquee animations ---- */
+
+/*
+ * Row 1 (default) — items scroll LEFT ←
+ * Visual: enter from RIGHT edge, exit from LEFT edge
+ * Track starts at 0% then slides to -50% (half the doubled content)
+ */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/*
+ * Row 2 (reverse) — items scroll RIGHT →
+ * Visual: enter from LEFT edge, exit from RIGHT edge
+ * Track starts at -50% then slides to 0%
+ */
+@keyframes marquee-scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-scroll var(--marquee-duration, 40s) linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-scroll-reverse var(--marquee-duration, 40s) linear infinite;
+}
+
+/* Pause on hover (applied to parent .group) */
+.group:hover .animate-marquee,
+.group:hover .animate-marquee-reverse {
+  animation-play-state: paused;
+}
