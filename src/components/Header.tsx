@@ -1,5 +1,5 @@
 "use client";
-
+import { BASE_PATH } from "@/lib/constants";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -26,9 +26,9 @@ export default function Header() {
       </div>
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white shadow-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-          <a href="#home" className="flex items-center">
+          <a href={`${BASE_PATH}#home`} className="flex items-center">
             <Image
-              src="/images/logo.png"
+              src={`${BASE_PATH}/images/logo.png`}
               alt="Shree Sawariya Taxi Services Indore"
               width={220}
               height={100}

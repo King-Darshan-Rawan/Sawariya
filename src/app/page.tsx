@@ -4,6 +4,7 @@ import BookingForm from "@/components/BookingForm";
 import ChatBot from "@/components/ChatBot";
 import DestinationSlider from "@/components/DestinationSlider";
 import { carWaLink } from "@/lib/site";
+import { BASE_PATH } from "@/lib/constants";
 
 const PHONE1 = "73898 16018";
 const PHONE2 = "88188 26659";
@@ -70,7 +71,7 @@ export default function Home() {
       {/* HERO / SLIDER */}
       <section className="relative isolate overflow-hidden bg-[#0b1f3a]">
         <Image
-          src="/images/hero.png"
+          src={`${BASE_PATH}/images/hero.png`}
           alt="Shri Sanvariya Taxi Service Indore"
           fill
           priority
@@ -130,7 +131,7 @@ export default function Home() {
         <Title>About Us</Title>
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div className="relative h-64 overflow-hidden rounded-xl sm:h-80">
-            <Image src="/images/driver.png" alt="Our drivers" fill className="object-cover" />
+            <Image src={`${BASE_PATH}/images/driver.png`} alt="Our drivers" fill className="object-cover" />
           </div>
           <div>
             <p className="text-[15px] leading-8 text-slate-700">
@@ -183,7 +184,7 @@ export default function Home() {
             >
               <h3 className="pt-4 text-sm font-extrabold uppercase text-[#0b1f3a]">{name}</h3>
               <div className="relative mx-auto mt-2 h-28 w-full">
-                <Image src={img} alt={name} fill className="object-contain" />
+                <Image src={`${BASE_PATH}${img}`} alt={name} fill className="object-contain" />
               </div>
               <p className="text-xs text-slate-500">{seats}</p>
               <p className="pt-1 text-xl font-extrabold text-amber-500">
@@ -233,7 +234,7 @@ export default function Home() {
           <div className="relative h-[420px]">
 
             <Image
-              src="/images/HardLogo.png"
+              src={`${BASE_PATH}/images/HardLogo.png`}
               alt="Professional Driver"
               fill
               priority
@@ -454,7 +455,7 @@ export default function Home() {
 
       {/* BANNER */}
       <section className="relative isolate overflow-hidden bg-[#0b1f3a] py-12">
-        <Image src="/images/banner.jpg" alt="banner" fill className="object-cover opacity-40" />
+        <Image src={`${BASE_PATH}/images/banner.jpg`} alt="banner" fill className="object-cover opacity-40" />
         <div className="relative text-center text-xl font-extrabold uppercase tracking-wide text-white sm:text-3xl">
           Safe Journey • Best Price • 24×7 Taxi Service
         </div>
@@ -466,7 +467,7 @@ export default function Home() {
           <div>
             <div className="inline-block rounded-lg bg-white p-2">
               <Image
-                src="/images/logo.png"
+                src={`${BASE_PATH}/images/logo.png`}
                 alt="Shree Sawariya Taxi Services Indore"
                 width={220}
                 height={100}
