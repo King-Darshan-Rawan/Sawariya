@@ -24,7 +24,7 @@ const services = [
 
 const fleet = [
   ["Swift Dzire", "/images/swift.png", "₹11", "4+1 Seater"],
-  ["Aura", "/images/aura.png", "₹11", "4+1 Seater"],
+  ["Aura", "/images/Aura.png", "₹11", "4+1 Seater"],
   ["Ertiga", "/images/ertiga.png", "₹13", "6+1 Seater"],
   ["Innova", "/images/innova.png", "₹18", "7+1 Seater"],
   ["Fortuner", "/images/fortuner.png", "On Demand", "7 Seater SUV"],
